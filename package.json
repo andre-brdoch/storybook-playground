@@ -1,0 +1,24 @@
+{
+  "name": "storybook-playground",
+  "version": "1.0.0",
+  "description": "tbd",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andre-brdoch/storybook-playground.git"
+  },
+  "keywords": [
+    "storybook",
+    "vue",
+    "components"
+  ],
+  "author": "Andre Brdoch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andre-brdoch/storybook-playground/issues"
+  },
+  "homepage": "https://github.com/andre-brdoch/storybook-playground#readme"
+}
