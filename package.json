@@ -20,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/andre-brdoch/storybook-playground/issues"
   },
-  "homepage": "https://github.com/andre-brdoch/storybook-playground#readme"
+  "homepage": "https://github.com/andre-brdoch/storybook-playground#readme",
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.1"
+  }
 }
