@@ -1,12 +1,9 @@
 import MyButton from './Button.vue';
 
 export default {
-  title: 'Example/Button',
+  title: 'Decorators',
   component: MyButton,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-    size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },
-  },
+  decorators: [() => '<div style="background-color: green;"><story /></div>'],
 };
 
 const Template = (args, { argTypes }) => ({
@@ -15,25 +12,20 @@ const Template = (args, { argTypes }) => ({
   template: '<my-button @onClick="onClick" v-bind="$props" />',
 });
 
-export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
+export const Standard = Template.bind({});
+Standard.args = {
   label: 'Button',
 };
+Standard.storyName = 'Decorator on component level';
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
-};
+export const WithDecorator = Template.bind({});
+WithDecorator.args = Standard.args;
+WithDecorator.decorators = [() => '<div style="padding: 3em;"><story /></div>'];
+WithDecorator.storyName = 'Decorator on component & story level';
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
-};
+export const DecoratorTemplate = Template.bind({});
+DecoratorTemplate.args = Standard.args;
+DecoratorTemplate.decorators = [
+  () => ({ template: '<div style="padding: 3em;"><story /></div>' }),
+];
+DecoratorTemplate.storyName = 'Decorator using "template" prop';
